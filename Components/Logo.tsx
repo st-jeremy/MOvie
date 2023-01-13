@@ -14,7 +14,7 @@ const Logo = () => {
         fontSize={{base: '18pt', md: '30pt'}} 
         onClick={handleHomeClick} 
         cursor='pointer' 
-        width={{base: 'fit-content', md: '300px'}} 
+        // width={{base: 'fit-content', md: '300px'}} 
         color={'white'}
       >
         Moviez

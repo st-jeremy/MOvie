@@ -17,13 +17,16 @@ const MovieList = () => {
   }
 
   return ( 
+    <>
     <Box>
-      <Heading>All Movies</Heading>
-      {movies.map((movie, index)=>{
-        return <MovieCard key={index} {...movies} />
+      <h2>All Movies</h2>
+
+      {movies.map((movie)=>{
+        return <movie key={movie.id} movie={...movies} />
       })}
       
     </Box>
+    </>
    );
 }
  

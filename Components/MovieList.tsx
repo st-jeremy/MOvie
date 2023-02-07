@@ -1,9 +1,16 @@
 import { Box } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
 const MovieList = () => {
   const [ movies, setMovies ] = useState([]);
+  const url = "https://api.themoviedb.org";
+
+  useEffect(() => {
+    fetchMovie();
+  }, []);
+
+  const fetchMovie = 
 
   return ( 
     <Box>

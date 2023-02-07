@@ -3,7 +3,8 @@ import { useState } from "react";
 import MovieCard from "./MovieCard";
 
 const MovieList = () => {
-  const [ movies, setMovies ] = useState([])
+  const [ movies, setMovies ] = useState([]);
+  
   return ( 
     <Box>
       {movies.map((movie, index)=>{

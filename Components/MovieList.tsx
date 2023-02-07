@@ -22,7 +22,7 @@ const MovieList = () => {
       <h2>All Movies</h2>
 
       {movies.map((movie)=>{
-        return <movie key={movie.id} movie={...movies} />
+        return <MovieCard key={movie} movie={...movies} />
       })}
       
     </Box>

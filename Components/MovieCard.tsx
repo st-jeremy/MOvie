@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 
 interface Image{
   width: number,
@@ -6,12 +6,11 @@ interface Image{
   alt: string
 }
 
-const MovieCard = () => {
-  const url= 
-  "h"
+const MovieCard = ({movie}) => {
+  
   return ( 
     <Box>
-      
+      <Heading>Movie: {movie.title}</Heading>
 
     </Box>
    );

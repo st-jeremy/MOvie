@@ -6,6 +6,9 @@ interface Image{
   height: number,
   alt: string
 }
+interface movie {
+
+}
 
 const MovieCard = ({movie}) => {
   

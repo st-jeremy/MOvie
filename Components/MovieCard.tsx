@@ -5,6 +5,7 @@ interface Image{
   height: number,
   alt: string
 }
+
 const MovieCard = () => {
   const url= 
   "h"

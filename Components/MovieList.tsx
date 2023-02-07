@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
@@ -10,10 +10,15 @@ const MovieList = () => {
     fetchMovie();
   }, []);
 
-  const fetchMovie = 
+  const fetchMovie = async () => {
+    const data = await fetch(url);
+    const movies = await data.json();
+    setMovies(movies.results);
+  }
 
   return ( 
     <Box>
+      <Heading>All Movies</Heading>
       {movies.map((movie, index)=>{
         return <MovieCard key={index} {...movies} />
       })}

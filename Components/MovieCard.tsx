@@ -1,14 +1,15 @@
 import { Box, Heading } from "@chakra-ui/react";
 import Image from "next/image";
-import type { AppProps from 'next/app';
+import type  AppProps from 'next/app';
 
-interface Image{
-  width: number,
-  height: number,
-  alt: string
+interface movie{
+  title: string,
+  backdrop_path: string,
+  path: string
+
 }
 
-const MovieCard = () => {
+const MovieCard = ({movie}) => {
   
   return ( 
     <Box>

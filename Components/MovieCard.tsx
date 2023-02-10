@@ -8,7 +8,7 @@ interface Image{
   alt: string
 }
 
-const MovieCard = ({movie}) => {
+const MovieCard = () => {
   
   return ( 
     <Box>

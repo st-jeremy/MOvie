@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import type  AppProps from 'next/app';
 
 const MovieCard = ({movie}) => {
   

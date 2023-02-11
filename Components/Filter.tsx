@@ -1,7 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect } from 'react';
 
-const Filter = ({ popular, setFiltered, activeGenre,  }) => {
+const Filter = () => {
 
   return ( 
     <Box>

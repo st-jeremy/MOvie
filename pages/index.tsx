@@ -19,7 +19,7 @@ export default function Home() {
 
       <main>
         <Navbar />
-        <MovieCard />
+        {/* <MovieCard /> */}
       </main>
     </>
   )

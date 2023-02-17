@@ -4,7 +4,6 @@ import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Navbar from '../Components/Navbar'
 import MovieCard from '../Components/MovieCard'
-import Playground from '../Components/Playground'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,8 +19,6 @@ export default function Home() {
 
       <main>
         <Navbar />
-        {/* <MovieCard /> */}
-        <Playground />
       </main>
     </>
   )

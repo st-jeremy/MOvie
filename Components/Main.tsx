@@ -1,18 +1,20 @@
-import { Box, Button, Heading, Input } from "@chakra-ui/react";
+import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
+import Image from "next/image";
 
 const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 
 const Main = () => {
   const [ name, setName ] = useState('');
-  const [ movie, setMovie ] = useState([]);
+  const [ movies, setMovies ] = useState([]);
 
   const getInfo = () => {
     axios
       .get(api + `&s=${name}` + "&type=movie" + "&page=1")
       .then((res) => {
         if(res){
+          setMovies(res.data)
           console.log(res.data);
         }
       })
@@ -31,6 +33,19 @@ const Main = () => {
         <Input type='text' name="name" placeholder="Search Movie Name" onChange={(e) => setName(e.target.value)} />
         <Button type="submit" onClick={(e) => handleSubmit(e)}> Search </Button>
       </form>
+
+      {movies ? 
+        <Box>
+          {movies.map(movie => (
+            <Box key={movie.imdbID}>
+              <Image src={movie.Poster} height={100} width={60} alt={movie.Title} />
+              <Text>{movie.Title}</Text>
+            </Box>
+          )
+          )}
+        </Box>
+        : null  
+      }
     </Box>
    );
 }

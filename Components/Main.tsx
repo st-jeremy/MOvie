@@ -13,7 +13,7 @@ const Main = () => {
 
   }
   return ( 
-    <Box  mt={30}>
+    <Box>
       <h2> Main </h2>
     </Box>
    );

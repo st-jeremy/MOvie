@@ -10,7 +10,7 @@ const Logo = () => {
 
   return ( 
     <Box textAlign={'center'} m={'auto'}>
-      <Heading 
+      {/* <Heading 
         fontSize={{base: '18pt', md: '30pt'}} 
         onClick={handleHomeClick} 
         cursor='pointer' 
@@ -18,7 +18,8 @@ const Logo = () => {
         color={'white'}
       >
         Moviez
-      </Heading>
+      </Heading> */}
+      Moviez
     </Box>
    );
 }

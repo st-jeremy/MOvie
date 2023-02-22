@@ -49,6 +49,23 @@ const Main = () => {
     getInfo();
   };
 
+
+  const [show, setShow ] = useState(false)
+
+  const showModal = () => {
+    setShow(true)
+  }
+
+  const hideModal = () => {
+    setShow(false)
+    setMovieDetails({})
+  }
+
+  const handleClose = () => {
+    hideModal()
+  }
+
+
   return ( 
     <Box>
       <Heading> Main </Heading>
@@ -71,6 +88,12 @@ const Main = () => {
         </Box>
         : <Text> Movie not found!</Text>  
       }
+
+      { movieDetails && (selectedId=== movies.imdbID) && show ? 
+        <MovieModal 
+          movieInfo = {movieDetails}
+          handleClose = {handleClose} /> 
+        : null }
     </Box>
    );
 }

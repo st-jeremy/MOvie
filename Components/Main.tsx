@@ -3,6 +3,14 @@ import { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 
+type movies = {
+  imdbID: string,
+  Title: string,
+  Type: string,
+  Poster: string,
+  Year: string
+};
+
 const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 
 const Main = () => {
@@ -14,7 +22,7 @@ const Main = () => {
       .get(api + `&s=${name}` + "&type=movie" + "&page=1")
       .then((res) => {
         if(res){
-          setMovies(res.data)
+          setMovies(res.data.Search)
           console.log(res.data);
         }
       })
@@ -40,11 +48,12 @@ const Main = () => {
             <Box key={movie.imdbID}>
               <Image src={movie.Poster} height={100} width={60} alt={movie.Title} />
               <Text>{movie.Title}</Text>
+              <Button>Details</Button>
             </Box>
           )
           )}
         </Box>
-        : null  
+        : <Text> Movie not found!</Text>  
       }
     </Box>
    );

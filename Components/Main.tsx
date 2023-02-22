@@ -10,8 +10,17 @@ const Main = () => {
   const [ name, setName ] = useState('');
 
   const getInfo = () => {
-
+    axios
+      .get(api + apiKey + `&s=${name}` + "&type=movie" + "&page=1")
+      .then((res) => {
+        if(res){
+          console.log(res.data);
+        }
+      })
   }
+
+  const handleSubmit = (e) 
+
   return ( 
     <Box>
       <h2> Main </h2>

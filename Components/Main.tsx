@@ -16,6 +16,7 @@ const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 const Main = () => {
   const [ name, setName ] = useState('');
   const [ movies, setMovies ] = useState([]);
+  const [ movieDetails, setMovieDetails ] = useState({})
 
   const getInfo = () => {
     axios
@@ -27,6 +28,11 @@ const Main = () => {
         }
       })
   };
+
+  // const getDetails = (e, id) => {
+  //   axios
+  //     .get(api + )
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +52,7 @@ const Main = () => {
         <Box>
           {movies.map(movie => (
             <Box key={movie.imdbID}>
-              <Image src={movie.Poster} height={100} width={60} alt={movie.Title} />
+              <img src={movie.Poster} height={100} width={60} alt={movie.Title} />
               <Text>{movie.Title}</Text>
               <Button>Details</Button>
             </Box>

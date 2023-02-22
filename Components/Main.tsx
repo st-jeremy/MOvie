@@ -7,6 +7,11 @@ const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 const apiKey = '2aacff32';
 
 const Main = () => {
+  const [ name, setName ] = useState('');
+
+  const getInfo = () => {
+    
+  }
   return ( 
     <Box>
       <h2> Main </h2>

@@ -10,10 +10,10 @@ const Main = () => {
   const [ name, setName ] = useState('');
 
   const getInfo = () => {
-    
+
   }
   return ( 
-    <Box>
+    <Box  mt={30}>
       <h2> Main </h2>
     </Box>
    );

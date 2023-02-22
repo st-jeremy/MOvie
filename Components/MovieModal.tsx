@@ -1,9 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 const MovieModal = () => {
   return ( 
     <Box>
-      
+      <Button>Close</Button>
     </Box>
    );
 }

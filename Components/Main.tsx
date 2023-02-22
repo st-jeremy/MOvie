@@ -17,8 +17,10 @@ const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 const Main = () => {
   const [ name, setName ] = useState('');
   const [ movies, setMovies ] = useState([]);
-  const [ movieDetails, setMovieDetails ] = useState({})
+  const [ movieDetails, setMovieDetails ] = useState({});
+  const [ selectedId, setSelectedId ] = useState(null);
 
+  // get movie response from api
   const getInfo = () => {
     axios
       .get(api + `&s=${name}` + "&type=movie" + "&page=1")
@@ -30,6 +32,7 @@ const Main = () => {
       })
   };
 
+  // get movie details from api
   const getDetails = (e, id) => {
     axios
       .get(api + `&i=${id}`)

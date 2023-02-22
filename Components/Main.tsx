@@ -2,6 +2,7 @@ import { Box, Button, Heading, Input, Text } from "@chakra-ui/react";
 import { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
+import MovieModal from "./MovieModal";
 
 type movies = {
   imdbID: string,
@@ -29,10 +30,16 @@ const Main = () => {
       })
   };
 
-  // const getDetails = (e, id) => {
-  //   axios
-  //     .get(api + )
-  // }
+  const getDetails = (e, id) => {
+    axios
+      .get(api + `&i=${id}`)
+      .then((res) => {
+        if(res){
+          console.log(res.data)
+          setMovieDetails(res.data)
+        }
+      })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -52,9 +59,9 @@ const Main = () => {
         <Box>
           {movies.map(movie => (
             <Box key={movie.imdbID}>
-              <img src={movie.Poster} height={100} width={60} alt={movie.Title} />
+              <Image src={movie.Poster} height={100} width={60} alt={movie.Title} />
               <Text>{movie.Title}</Text>
-              <Button>Details</Button>
+              <Button onClick={e => getDetails(e, movie.imdbID)}>Details</Button>
             </Box>
           )
           )}

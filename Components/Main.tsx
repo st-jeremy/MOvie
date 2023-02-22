@@ -35,7 +35,8 @@ const Main = () => {
   // get movie details from api
   const getDetails = (e, id) => {
     e.preventDefault();
-    setSelectedId(id)
+    setSelectedId(id);
+
     axios
       .get(api + `&i=${id}`)
       .then((res) => {
@@ -86,11 +87,12 @@ const Main = () => {
               <Text>{movie.Title}</Text>
               <Button onClick={e => getDetails(e, movie.imdbID)}>Details</Button>
 
-              { movieDetails && (selectedId== movie.imdbID) && show ? 
-        <MovieModal 
-          movieInfo = {movieDetails}
-          handleClose = {handleClose} /> 
-        : null }
+              { movieDetails && (selectedId === movie.imdbID) && show ? 
+                <MovieModal 
+                  movieInfo = {movieDetails}
+                  handleClose = {handleClose} /> 
+                : <Box></Box>
+              }
             </Box>
           )
           )}

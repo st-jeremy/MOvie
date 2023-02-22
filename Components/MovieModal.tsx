@@ -4,7 +4,7 @@ import Image from "next/image";
 const MovieModal = ({movieInfo, handleClose}) => {
   return ( 
     <Box>
-      <Image src={movieInfo.Poster} height={ 100} width={ 70} alt={"Poster"} />
+      <Image src={movieInfo.Poster} height={250} width={250} alt={"Poster"} />
         <p>
           <b>Actors:</b> {movieInfo.Actors}
         </p>

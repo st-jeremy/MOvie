@@ -34,12 +34,15 @@ const Main = () => {
 
   // get movie details from api
   const getDetails = (e, id) => {
+    e.preventDefault();
+    setSelectedId(id)
     axios
       .get(api + `&i=${id}`)
       .then((res) => {
         if(res){
           console.log(res.data)
           setMovieDetails(res.data)
+          showModal()
         }
       })
   }
@@ -79,9 +82,15 @@ const Main = () => {
         <Box>
           {movies.map(movie => (
             <Box key={movie.imdbID}>
-              <Image src={movie.Poster} height={100} width={60} alt={movie.Title} />
+              <Image src={movie.Poster} height={300} width={300} alt={movie.Title} />
               <Text>{movie.Title}</Text>
               <Button onClick={e => getDetails(e, movie.imdbID)}>Details</Button>
+
+              { movieDetails && (selectedId== movie.imdbID) && show ? 
+        <MovieModal 
+          movieInfo = {movieDetails}
+          handleClose = {handleClose} /> 
+        : null }
             </Box>
           )
           )}
@@ -89,11 +98,7 @@ const Main = () => {
         : <Text> Movie not found!</Text>  
       }
 
-      { movieDetails && (selectedId=== movies.imdbID) && show ? 
-        <MovieModal 
-          movieInfo = {movieDetails}
-          handleClose = {handleClose} /> 
-        : null }
+      
     </Box>
    );
 }

@@ -4,14 +4,13 @@ import axios from "axios";
 
 const api =  'http://www.omdbapi.com/?i=tt3896198&apikey=2aacff32';
 
-const apiKey = '2aacff32';
-
 const Main = () => {
   const [ name, setName ] = useState('');
+  const [ movie, setMovie ] = useState([]);
 
   const getInfo = () => {
     axios
-      .get(api + apiKey + `&s=${name}` + "&type=movie" + "&page=1")
+      .get(api + `&s=${name}` + "&type=movie" + "&page=1")
       .then((res) => {
         if(res){
           console.log(res.data);

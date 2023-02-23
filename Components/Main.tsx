@@ -3,8 +3,9 @@ import { useState } from "react";
 import axios from "axios";
 import Image from "next/image";
 import MovieModal from "./MovieModal";
+import { movie } from './Types';
 
-type movies = {
+interface movies {
   imdbID: string,
   Title: string,
   Type: string,
@@ -26,7 +27,7 @@ const Main = () => {
       .get(api + `&s=${name}` + "&type=movie" + "&page=1")
       .then((res) => {
         if(res){
-          setMovies(res.data.Search)
+          setMovies(res.data)
           console.log(res.data);
         }
       })
@@ -97,7 +98,8 @@ const Main = () => {
           )
           )}
         </Box>
-        : <Text> Movie not found!</Text>  
+        : 
+        <Text> Movie not found!</Text>  
       }
 
       

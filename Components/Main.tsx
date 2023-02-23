@@ -54,7 +54,6 @@ const Main = () => {
     getInfo();
   };
 
-
   const [show, setShow ] = useState(false)
 
   const showModal = () => {
@@ -69,7 +68,6 @@ const Main = () => {
   const handleClose = () => {
     hideModal()
   }
-
 
   return ( 
     <Box>

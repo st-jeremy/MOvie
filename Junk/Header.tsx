@@ -9,10 +9,17 @@ const Header = () => {
       <Box>
         {/* <Text>Welcome to Moviez!</Text> */}
       </Box>
+      <Box>
+        /ghchgxxjckhccyvjc
+        vhvxhxhg
+        <Text>
+          jcytxuyiuyfikvuvyvyu
+        </Text>
+      </Box>
 
       <Box>
         <Box>
-          
+
         </Box>
 
       </Box>

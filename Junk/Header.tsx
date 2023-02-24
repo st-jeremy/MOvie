@@ -9,6 +9,13 @@ const Header = () => {
       <Box>
         {/* <Text>Welcome to Moviez!</Text> */}
       </Box>
+
+      <Box>
+        <Box>
+          
+        </Box>
+
+      </Box>
     </Box>
    );
 }

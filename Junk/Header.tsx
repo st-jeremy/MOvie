@@ -13,7 +13,10 @@ const Header = () => {
         /ghchgxxjckhccyvjc
         vhvxhxhg
         <Text>
-          jcytxuyiuyfikvuvyvyu
+          jcytxuyiuyfikvuvyvyu <Box>
+          Hello mabn 
+          
+        </Box>
         </Text>
         <Box>
           Hello mabn 

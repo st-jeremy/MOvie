@@ -23,6 +23,9 @@ const Header = () => {
       <Box>
           Hello mabn 
           
+        </Box> <Box>
+          Hello mabn 
+          
         </Box>
 
       <Box>

@@ -6,11 +6,7 @@ interface Text{
 const Header = () => {
   return ( 
     <Box>
-      <Box>
-        /ghchgxxjckhccyvjc
-        vhvxhxhg
-        
-      </Box>
+      
       <Box>
           Hello mabn 
           

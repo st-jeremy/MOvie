@@ -7,7 +7,7 @@ const Header = () => {
   return ( 
     <Box>
       <Box>
-        {/* <Text>Welcome to Moviez!</Text> */}
+        {/* <Text> Welcome to Moviez! </Text> */}
       </Box>
       <Box>
         /ghchgxxjckhccyvjc

@@ -7,11 +7,6 @@ const Header = () => {
   return ( 
     <Box>
      
-        
-
-      <Box>
-
-      </Box>
     </Box>
    );
 }

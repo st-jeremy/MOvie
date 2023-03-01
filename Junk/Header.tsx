@@ -8,7 +8,7 @@ const Header = () => {
     <Box>
      
     </Box>
-   );
+  );
 }
  
 export default Header;
